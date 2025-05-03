@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" spacing="10">
+    <padding>
+        <Insets bottom="10" left="10" right="10" top="10"/>
+    </padding>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label fx:id="categoryLabel" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+        <Button text="Fermer"  style="-fx-background-color: #f44336; -fx-text-fill: white;"/>
+    </HBox>
+
+    <SplitPane dividerPositions="0.7">
+        <items>
+            <VBox spacing="5">
+                <TableView fx:id="oeuvreTable">
+                    <columns>
+                        <TableColumn fx:id="nomColumn" text="Nom" prefWidth="150"/>
+                        <TableColumn fx:id="descriptionColumn" text="Description" prefWidth="300"/>
+                        <TableColumn fx:id="dateColumn" text="Date" prefWidth="100"/>
+                        <TableColumn fx:id="likesColumn" text="Likes" prefWidth="50"/>
+                    </columns>
+                </TableView>
+                <Button text="Voir détails"
+                        style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
+            </VBox>
+
+            <VBox alignment="CENTER" spacing="10">
+                <ImageView fx:id="imageView" fitHeight="300" fitWidth="300" preserveRatio="true"/>
+                <Label text="Aperçu de l'œuvre sélectionnée" style="-fx-font-style: italic;"/>
+            </VBox>
+        </items>
+    </SplitPane>
+</VBox>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.Circle?>
+<?import java.net.URL?>
+
+<VBox fx:id="sidebar" fx:controller="controller.Categorie.SidebarController"
+      spacing="20" styleClass="sidebar"
+      xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+
+    <stylesheets>
+        <URL value="@/styles/dashboard-style.css" />
+    </stylesheets>
+
+    <!-- Header -->
+    <HBox alignment="CENTER_LEFT" spacing="10" styleClass="nav-header" style="-fx-padding: 20;">
+        <Label styleClass="brand-icon" text="🎨" />
+        <Label styleClass="brand-text" text="ArtSpace" />
+    </HBox>
+
+    <!-- User Profile -->
+    <HBox spacing="10" style="-fx-padding: 0 20;" alignment="CENTER_LEFT">
+        <ImageView fitWidth="50" fitHeight="50">
+            <image>
+                <Image url="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/270px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg" />
+            </image>
+            <clip>
+                <Circle centerX="25" centerY="25" radius="25" />
+            </clip>
+        </ImageView>
+        <VBox spacing="2">
+            <Label text="Admin" styleClass="user-name" />
+            <Label text="Administrator" styleClass="user-role" />
+        </VBox>
+    </HBox>
+
+    <!-- Navigation -->
+    <VBox spacing="10" style="-fx-padding: 0 20;">
+        <Button fx:id="btnOeuvre" styleClass="sidebar-button" text="Gestion Oeuvre" />
+
+    </VBox>
+
+    <effect>
+        <DropShadow color="rgba(0,0,0,0.1)" radius="4" spread="0" />
+    </effect>
+
+</VBox>

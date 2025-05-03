@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.Categorie.ModifierCategorieController"
+            stylesheets="@/styles/chic-theme.css">
+
+    <VBox spacing="20.0" AnchorPane.bottomAnchor="20.0"
+          AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0"
+          AnchorPane.topAnchor="20.0" style="-fx-padding: 20;">
+
+        <Text text="Modifier Catégorie"
+              style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+        <GridPane hgap="10.0" vgap="10.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="150.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="200.0"/>
+            </columnConstraints>
+
+            <children>
+                <Label text="Nom Catégorie:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                <TextField fx:id="txtNomCategorie" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+                <Label text="Style:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                <TextField fx:id="txtStyleCategorie" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+                <Label text="Technique:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                <TextField fx:id="txtTechniqueCategorie" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+            </children>
+        </GridPane>
+
+        <HBox spacing="20" alignment="CENTER">
+            <Button text="Annuler" onAction="#annuler"
+                    style="-fx-background-color: #f44336; -fx-text-fill: white;"/>
+            <Button text="Modifier" onAction="#modifier"
+                    style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
+        </HBox>
+    </VBox>
+</AnchorPane>

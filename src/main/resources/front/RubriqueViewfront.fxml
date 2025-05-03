@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Button?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.frontend.RubriqueFrontController">
+    <TableView fx:id="rubriqueTable" layoutX="14.0" layoutY="13.0" prefHeight="400.0" prefWidth="600.0">
+        <columns>
+            <TableColumn fx:id="nomRubriqueColumn" text="Nom" prefWidth="200.0"/>
+            <TableColumn fx:id="descriptionColumn" text="Description" prefWidth="200.0"/>
+            <TableColumn fx:id="dateColumn" text="Date" prefWidth="100.0"/>
+            <TableColumn fx:id="actionColumn" text="Actions" prefWidth="100.0"/>
+        </columns>
+    </TableView>
+</AnchorPane>

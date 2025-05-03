@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="674.0" prefWidth="984.0" style="-fx-background-color: sqs;" stylesheets="@/css/css.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Partenariat.PartenariatController">
+    <children>
+        <Label layoutX="76.0" layoutY="44.0" text="nom" />
+        <Label layoutX="76.0" layoutY="80.0" text="type" />
+        <Label layoutX="76.0" layoutY="119.0" text="description" />
+        <Label layoutX="76.0" layoutY="161.0" text="adresse" />
+        <Label layoutX="84.0" layoutY="270.0" text="logo" />
+        <Label layoutX="79.0" layoutY="399.0" text="telephone" />
+        <Label layoutX="74.0" layoutY="454.0" text="dateDebut" />
+        <Label layoutX="81.0" layoutY="506.0" text="dateFin" />
+        <TextField fx:id="tfNom" layoutX="212.0" layoutY="40.0" prefHeight="26.0" prefWidth="382.0" />
+        <TextField fx:id="tfType" layoutX="212.0" layoutY="76.0" prefHeight="26.0" prefWidth="382.0" />
+        <TextField fx:id="tfDescription" layoutX="212.0" layoutY="115.0" prefHeight="26.0" prefWidth="382.0" />
+        <TextField fx:id="tfAdresse" layoutX="213.0" layoutY="157.0" prefHeight="26.0" prefWidth="381.0" />
+        <TextField fx:id="tfLogo" layoutX="441.0" layoutY="253.0" prefHeight="26.0" prefWidth="156.0" />
+        <TextField fx:id="tfPhone" layoutX="195.0" layoutY="395.0" prefHeight="26.0" prefWidth="402.0" />
+        <DatePicker fx:id="tfDebut" layoutX="195.0" layoutY="449.0" prefHeight="26.0" prefWidth="402.0" />
+        <DatePicker fx:id="tfFin" layoutX="195.0" layoutY="501.0" prefHeight="26.0" prefWidth="402.0" />
+        <Button fx:id="btnAjout" layoutX="280.0" layoutY="552.0" mnemonicParsing="false" onAction="#ajouterPartenariat" prefHeight="26.0" prefWidth="156.0" text="add" />
+        <Button fx:id="btnimage" layoutX="441.0" layoutY="315.0" mnemonicParsing="false" onAction="#choisirImg" prefHeight="26.0" prefWidth="156.0" text="choisir image" />
+        <ImageView fx:id="imageViewPreview" fitHeight="150.0" fitWidth="200.0" layoutX="213.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true" />
+        <Button fx:id="afficherButton" layoutX="482.0" layoutY="553.0" mnemonicParsing="false" onAction="#afficherPartenariat" prefHeight="26.0" prefWidth="164.0" text="afficher" />
+        <Label fx:id="nomError" layoutX="626.0" layoutY="44.0" prefHeight="18.0" prefWidth="156.0" style="-fx-text-fill: red; -fx-font-size: 11;" />
+        <Label fx:id="typeError" layoutX="626.0" layoutY="80.0" prefHeight="18.0" prefWidth="156.0" style="-fx-text-fill: red; -fx-font-size: 11;"/>
+        <Label fx:id="adresseError" layoutX="626.0" layoutY="161.0" prefHeight="18.0" prefWidth="156.0" style="-fx-text-fill: red; -fx-font-size: 11;"/>
+        <Label fx:id="descError" layoutX="626.0" layoutY="119.0" prefHeight="18.0" prefWidth="156.0" style="-fx-text-fill: red; -fx-font-size: 11; "/>
+        <Label fx:id="imgError" layoutX="626.0" layoutY="296.0" prefHeight="18.0" prefWidth="156.0" style="-fx-text-fill: red; -fx-font-size: 11;" />
+        <Label fx:id="telError" layoutX="626.0" layoutY="399.0" prefHeight="18.0" prefWidth="156.0" style="-fx-text-fill: red; -fx-font-size: 11;" />
+        <Label fx:id="dbError" layoutX="626.0" layoutY="453.0" prefHeight="18.0" prefWidth="156.0" style="-fx-text-fill: red; -fx-font-size: 11;"/>
+        <Label fx:id="dfError" layoutX="626.0" layoutY="505.0" prefHeight="18.0" prefWidth="156.0" style="-fx-text-fill: red; -fx-font-size: 11; "/>
+
+    </children>
+    <stylesheets>
+
+    </stylesheets>
+</AnchorPane>

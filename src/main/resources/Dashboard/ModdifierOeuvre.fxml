@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<HBox xmlns="http://javafx.com/javafx/1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.Oeuvre.ModifierOeuvreController"
+      spacing="0">
+
+    <!-- Barre latérale -->
+    <fx:include source="sideBar.fxml" fx:id="sidebar"/>
+
+    <!-- Contenu principal -->
+    <VBox styleClass="main-content" HBox.hgrow="ALWAYS">
+        <AnchorPane styleClass="form-root">
+            <VBox spacing="15" AnchorPane.topAnchor="20" AnchorPane.bottomAnchor="20"
+                  AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20">
+
+                <!-- Titre -->
+                <HBox alignment="CENTER_LEFT" spacing="15" styleClass="header-box">
+                    <Label text="Modifier une Oeuvre" styleClass="header-label" />
+                </HBox>
+
+                <Separator styleClass="title-separator" />
+
+                <!-- Formulaire -->
+                <GridPane hgap="12" vgap="12" styleClass="form-grid">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="NEVER" minWidth="120" />
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="180" />
+                    </columnConstraints>
+
+                    <!-- Nom -->
+                    <Label styleClass="field-label" text="Nom" />
+                    <TextField fx:id="nomField" styleClass="form-input" GridPane.columnIndex="1" />
+
+                    <!-- Description -->
+                    <Label styleClass="field-label" text="Description" GridPane.rowIndex="1" />
+                    <TextArea fx:id="descriptionField" styleClass="form-textarea" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                    <!-- Date -->
+                    <Label styleClass="field-label" text="Date création" GridPane.rowIndex="2" />
+                    <DatePicker fx:id="dateCreationPicker" styleClass="form-datepicker" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                    <!-- Catégorie -->
+                    <Label styleClass="field-label" text="Catégorie" GridPane.rowIndex="3" />
+                    <HBox spacing="8" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                        <ComboBox fx:id="categorieComboBox" prefWidth="150" styleClass="form-combo" />
+                        <Button onAction="#redirectToAddCategory" styleClass="icon-button" text="+" />
+                    </HBox>
+
+                    <!-- Signature -->
+                    <Label styleClass="field-label" text="Signature" GridPane.rowIndex="4" />
+                    <CheckBox fx:id="signatureCheckbox" styleClass="form-checkbox" text="œuvre signée" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                    <!-- Image -->
+                    <Label styleClass="field-label" text="Image" GridPane.rowIndex="5" />
+                    <HBox alignment="CENTER_LEFT" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                        <VBox spacing="4">
+                            <Button fx:id="uploadButton" onAction="#handleChooseImage" styleClass="browse-button" text="Parcourir" />
+                            <Label fx:id="imageNameLabel" styleClass="file-label" text="Aucun fichier" />
+                            <Label styleClass="hint-label" text="JPG/PNG/WebP (5MB max)" />
+                        </VBox>
+                        <ImageView fx:id="imagePreview" fitHeight="60" fitWidth="60" preserveRatio="true" styleClass="image-preview" />
+                    </HBox>
+
+                    <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                    </rowConstraints>
+                </GridPane>
+
+                <!-- Status -->
+                <Label fx:id="statusLabel" styleClass="status-message" />
+
+                <!-- Boutons -->
+                <HBox alignment="CENTER_RIGHT" spacing="12">
+                    <Button styleClass="secondary-button" text="Annuler" />
+                    <Button fx:id="updateButton" onAction="#handleUpdateDash" styleClass="primary-button" text="Mettre à jour" />
+                </HBox>
+            </VBox>
+        </AnchorPane>
+
+        <!-- CSS -->
+        <stylesheets>
+            <URL value="@../styles/Dash.css" />
+        </stylesheets>
+    </VBox>
+</HBox>

@@ -1,0 +1,40 @@
+.navbar {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0 0 1 0;
+}
+
+.nav-header .brand-text {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #444;
+}
+
+.brand-icon {
+    -fx-font-size: 22px;
+}
+
+.nav-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #444;
+    -fx-font-size: 14px;
+    -fx-padding: 6 12;
+    -fx-border-radius: 5;
+    -fx-cursor: hand;
+    -fx-border-color: transparent;
+}
+
+.nav-button:hover {
+    -fx-background-color: #f0f0f0;
+    -fx-text-fill: #000;
+}
+
+.user-name {
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+.user-role {
+    -fx-font-size: 11px;
+    -fx-text-fill: #888;
+}

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.Partenariat.FrontPartenariat"
+            prefWidth="1200.0" prefHeight="800.0"
+            stylesheets="@/css/dashboard.css">
+
+    <VBox AnchorPane.topAnchor="0.0" AnchorPane.leftAnchor="0.0"
+          AnchorPane.rightAnchor="0.0" AnchorPane.bottomAnchor="0.0">
+
+        <!-- Top Navigation Bar -->
+        <HBox styleClass="top-nav" alignment="CENTER_LEFT" spacing="20">
+            <padding>
+                <Insets top="10" right="20" bottom="10" left="20"/>
+            </padding>
+
+            <!-- Navigation Buttons -->
+            <Button text="My Profile" fx:id="profileButton" styleClass="nav-button"/>
+            <Button text="My Events" fx:id="eventsButton" styleClass="nav-button"/>
+            <Button text="My Gallery" fx:id="galleryButton" styleClass="nav-button"/>
+
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <!-- User Info and Logout -->
+            <HBox alignment="CENTER" spacing="10">
+                <Label fx:id="userNameLabel" styleClass="user-name"/>
+                <ImageView fx:id="userImage" fitHeight="45" fitWidth="45"
+                           preserveRatio="true" styleClass="user-avatar">
+                    <clip>
+                        <Circle radius="22.5" centerX="22.5" centerY="22.5"/>
+                    </clip>
+                </ImageView>
+            </HBox>
+        </HBox>
+
+        <!-- Main Content Area -->
+        <VBox spacing="20" styleClass="main-content">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+
+
+            <!-- Section Title -->
+            <VBox styleClass="profile-container" spacing="15">
+                <padding>
+                    <Insets top="20" right="20" bottom="10" left="20"/>
+                </padding>
+                <HBox alignment="CENTER_LEFT" spacing="20">
+                    <Label text="listes des Partenariats" styleClass="section-title"/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                </HBox>
+            </VBox>
+
+            <!-- Content Area: Cards of Partenariats -->
+            <ScrollPane fx:id="contentScrollPane" fitToWidth="true" VBox.vgrow="ALWAYS">
+                <content>
+                    <VBox fx:id="partenariatContainer" spacing="15">
+                        <padding>
+                            <Insets top="20" right="20" bottom="20" left="20"/>
+                        </padding>
+
+                    </VBox>
+                </content>
+            </ScrollPane>
+        </VBox>
+    </VBox>
+</AnchorPane>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="458.0" prefWidth="756.0" stylesheets="@../dashboard.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CoursMateriel.CoursController">
+   <children>
+      <Button fx:id="addButton" layoutX="69.0" layoutY="397.0" mnemonicParsing="false" onAction="#ajouterCours" prefHeight="51.0" prefWidth="126.0" text="Ajouter" />
+      <Label layoutX="65.0" layoutY="76.0" prefHeight="18.0" prefWidth="75.0" text="type_atelier" />
+      <Label layoutX="65.0" layoutY="111.0" text="description_cours" />
+      <Label layoutX="65.0" layoutY="150.0" text="duree_cours" />
+      <Label layoutX="65.0" layoutY="184.0" text="date_cours" />
+      <Label layoutX="65.0" layoutY="221.0" text="image_cours" />
+      <Label layoutX="67.0" layoutY="347.0" text="lien_video_cours" />
+      <TextField fx:id="typeAtelierTF" layoutX="181.0" layoutY="73.0" />
+      <TextField fx:id="description_coursTF" layoutX="182.0" layoutY="107.0" />
+      <TextField fx:id="dureeTF" layoutX="182.0" layoutY="146.0" />
+      <DatePicker fx:id="date_coursTF" layoutX="181.0" layoutY="180.0" prefHeight="26.0" prefWidth="150.0" />
+      <TextField fx:id="lienTF" layoutX="182.0" layoutY="343.0" />
+      <Button fx:id="browseImageButton" layoutX="334.0" layoutY="258.0" mnemonicParsing="false" onAction="#handleBrowseImage" prefHeight="51.0" prefWidth="193.0" text="choisir image" />
+      <TextField fx:id="imagePathTF" layoutX="335.0" layoutY="217.0" />
+      <Button fx:id="afficherButton" layoutX="219.0" layoutY="397.0" mnemonicParsing="false" onAction="#afficherCours" prefHeight="51.0" prefWidth="135.0" text="Afficher" />
+      <ImageView fx:id="imageViewPreview" fitHeight="118.0" fitWidth="135.0" layoutX="188.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true" />
+
+   </children>
+</AnchorPane>

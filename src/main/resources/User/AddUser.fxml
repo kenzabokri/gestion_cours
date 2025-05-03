@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.User.AddUser" stylesheets="@/dashboard.css">
+   <children>
+      <VBox spacing="15" alignment="CENTER" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <Label text="Create Account" style="-fx-font-size: 24;"/>
+
+         <GridPane vgap="10" hgap="10">
+            <Label text="Name" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="txtnom" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <Label text="First Name" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="txtprenom" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+            <Label text="Email" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="txtmail" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+            <Label text="Password" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <PasswordField fx:id="txtpass" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+         </GridPane>
+
+         <VBox alignment="CENTER" spacing="10">
+            <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="200.0" preserveRatio="true"/>
+            <Label fx:id="imageLabel" text="No image selected"/>
+            <Button fx:id="uploadButton" text="Upload Image" onAction="#uploadImage"/>
+         </VBox>
+
+         <Label fx:id="errorLabel" textFill="RED" visible="false"/>
+
+         <Button fx:id="Valider" text="Create Account" onAction="#AjouterUser"/>
+      </VBox>
+   </children>
+</AnchorPane>

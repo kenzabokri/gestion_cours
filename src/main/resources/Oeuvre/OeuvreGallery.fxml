@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import java.net.URL?>
+<VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:id="mainContainer" spacing="20" style="-fx-background-color: #f5f5f5;">
+
+    <!-- Hero Section -->
+    <StackPane style="-fx-background-color: white; -fx-padding: 40;">
+        <VBox alignment="CENTER" spacing="10">
+            <Label text="Bienvenue à l'Exposition d'Art"
+                   style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #333;"/>
+            <Label text="Explorez une collection d'œuvres uniques créées par des artistes talentueux"
+                   style="-fx-font-size: 16px; -fx-text-fill: #666;"/>
+        </VBox>
+    </StackPane>
+
+    <!-- Filter and Action Buttons -->
+    <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-padding: 0 20;">
+        <Label text="Filtrer par :" style="-fx-font-weight: bold; -fx-text-fill: #666;"/>
+        <ComboBox fx:id="categoryFilter" style="-fx-background-radius: 30; -fx-pref-width: 200;"/>
+        <!--  <Button fx:id="sortButton" text="Trier" onAction="#handleSort"/>
+       <Button fx:id="searchButton" text="Rechercher" onAction="#handleSearch"/>
+     <Button fx:id="categoriesButton" text="Catégories" onAction="#handleCategories"/>
+     <Button fx:id="generateButton" text="Générer" onAction="#handleGenerate"/> -->
+</HBox>
+
+<!-- Gallery Container -->
+    <ScrollPane fitToWidth="true" style="-fx-background: transparent; -fx-background-color: transparent;">
+        <FlowPane fx:id="galleryContainer" alignment="TOP_CENTER" hgap="20" vgap="20"
+                  style="-fx-padding: 20; -fx-background-color: #f5f5f5;">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+        </FlowPane>
+    </ScrollPane>
+
+    <!-- Notification Icon -->
+    <HBox fx:id="notificationIcon" alignment="CENTER"
+          style="-fx-background-color: white; -fx-padding: 5; -fx-background-radius: 50%;
+                -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 0);"
+          spacing="5">
+        <ImageView fitWidth="24" fitHeight="24">
+            <Image url="@/images/bell-icon.png"/>
+        </ImageView>
+        <Label fx:id="notificationCount" text="0"
+               style="-fx-background-color: red; -fx-text-fill: white; -fx-background-radius: 50%;
+                     -fx-padding: 2 6 2 6; -fx-font-size: 12;"/>
+    </HBox>
+
+    <!-- Notification Panel -->
+    <VBox fx:id="notificationPanel" alignment="TOP_RIGHT"
+          style="-fx-background-color: white; -fx-border-color: #ccc; -fx-border-width: 1;
+                -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);
+                -fx-pref-width: 300; -fx-padding: 10;">
+        <Label text="Notifications" style="-fx-font-weight: bold; -fx-padding: 0 0 10 0;"/>
+        <VBox fx:id="notificationContent" spacing="5"/>
+    </VBox>
+
+    <stylesheets>
+        <URL value="@../styles/gallery1.css"/>
+    </stylesheets>
+</VBox>

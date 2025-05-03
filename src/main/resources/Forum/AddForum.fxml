@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.Forum.AddForumController" stylesheets="@/dashboard.css">
+    <VBox spacing="10" alignment="CENTER" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20">
+
+        <Label text="Ajouter un Forum" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+        <TextField fx:id="nomField" promptText="Nom du forum" />
+        <TextField fx:id="themeField" promptText="Thème du forum" />
+        <TextArea fx:id="descriptionArea" promptText="Description" prefRowCount="3" />
+        <TextField fx:id="imageField" promptText="Lien ou nom de l'image" />
+
+        <Button text="Ajouter" onAction="#handleAddForum" style="-fx-background-color: rgba(238,134,7,0.92); -fx-text-fill: white;" />
+
+    </VBox>
+</AnchorPane>

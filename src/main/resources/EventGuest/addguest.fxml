@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" stylesheets="@/dashboard.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Event.AddGuestController">
+    <VBox spacing="25" layoutX="20" layoutY="20" prefWidth="760">
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Text fill="#2c3e50" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter un Invité" textAlignment="CENTER">
+                <font>
+                    <Font size="32.0" name="System Bold" />
+                </font>
+            </Text>
+        </HBox>
+
+        <VBox spacing="15" style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 20;">
+            <HBox spacing="20" alignment="CENTER_LEFT">
+                <Label text="Événement:" style="-fx-font-size: 14; -fx-text-fill: #2c3e50;" minWidth="100"/>
+                <ComboBox fx:id="eventComboBox" promptText="Sélectionnez un événement"
+                         style="-fx-background-radius: 5; -fx-padding: 8 15; -fx-font-size: 14;" 
+                         prefWidth="300"/>
+            </HBox>
+
+            <HBox spacing="20" alignment="CENTER_LEFT">
+                <Label text="Nom:" style="-fx-font-size: 14; -fx-text-fill: #2c3e50;" minWidth="100"/>
+                <TextField fx:id="nomGuestField" promptText="Entrez le nom"
+                           style="-fx-background-radius: 5; -fx-padding: 8 15; -fx-font-size: 14;"
+                           prefWidth="300"/>
+            </HBox>
+
+            <HBox spacing="20" alignment="CENTER_LEFT">
+                <Label text="Prénom:" style="-fx-font-size: 14; -fx-text-fill: #2c3e50;" minWidth="100"/>
+                <TextField fx:id="prenomGuestField" promptText="Entrez le prénom"
+                           style="-fx-background-radius: 5; -fx-padding: 8 15; -fx-font-size: 14;"
+                           prefWidth="300"/>
+            </HBox>
+
+            <HBox spacing="20" alignment="CENTER_LEFT">
+                <Label text="Email:" style="-fx-font-size: 14; -fx-text-fill: #2c3e50;" minWidth="100"/>
+                <TextField fx:id="emailGuestField" promptText="Entrez l'email"
+                           style="-fx-background-radius: 5; -fx-padding: 8 15; -fx-font-size: 14;"
+                           prefWidth="300"/>
+            </HBox>
+
+            <HBox spacing="20" alignment="CENTER_LEFT">
+                <Label text="Téléphone:" style="-fx-font-size: 14; -fx-text-fill: #2c3e50;" minWidth="100"/>
+                <TextField fx:id="phoneGuestField" promptText="Entrez le numéro de téléphone"
+                           style="-fx-background-radius: 5; -fx-padding: 8 15; -fx-font-size: 14;"
+                           prefWidth="300"/>
+            </HBox>
+
+            <HBox spacing="20" alignment="CENTER_LEFT">
+                <Label text="Image:" style="-fx-font-size: 14; -fx-text-fill: #2c3e50;" minWidth="100"/>
+                <TextField fx:id="imageGuestField" promptText="Chemin de l'image"
+                           style="-fx-background-radius: 5; -fx-padding: 8 15; -fx-font-size: 14;"
+                           prefWidth="200"/>
+                <Button fx:id="btnSelectImage" onAction="#selectImage" text="Parcourir"
+                        style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-background-radius: 5; -fx-padding: 8 15; -fx-font-size: 14;"/>
+            </HBox>
+        </VBox>
+
+        <HBox spacing="20" alignment="CENTER">
+            <Button fx:id="btnAdd" onAction="#addGuest" text="Ajouter"
+                    style="-fx-background-color:rgb(219, 141, 52); -fx-text-fill: white; -fx-background-radius: 5; -fx-padding: 8 20; -fx-font-size: 14;"/>
+            <Button fx:id="btnViewGuests" onAction="#goToShowGuests" text="Voir les invités"
+                    style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-background-radius: 5; -fx-padding: 8 20; -fx-font-size: 14;"/>
+            <Button fx:id="btnBack" onAction="#goBack" text="Retour"
+                    style="-fx-background-color:rgb(244, 199, 148); -fx-text-fill: white; -fx-background-radius: 5; -fx-padding: 8 20; -fx-font-size: 14;"/>
+        </HBox>
+    </VBox>
+</AnchorPane>

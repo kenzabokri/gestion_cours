@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.Partenariat.FrontSponsoring"
+            prefWidth="1200.0" prefHeight="800.0"
+            stylesheets="@/css/dashboard.css">
+
+    <VBox AnchorPane.topAnchor="0.0" AnchorPane.leftAnchor="0.0"
+          AnchorPane.rightAnchor="0.0" AnchorPane.bottomAnchor="0.0">
+
+        <!-- Top Navigation Bar -->
+        <HBox styleClass="top-nav" alignment="CENTER_LEFT" spacing="20">
+            <padding>
+                <Insets top="10" right="20" bottom="10" left="20"/>
+            </padding>
+
+            <!-- Navigation Buttons -->
+            <Button text="My Profile" fx:id="profileButton" styleClass="nav-button"/>
+            <Button text="My Events" fx:id="eventsButton" styleClass="nav-button"/>
+            <Button text="My Gallery" fx:id="galleryButton" styleClass="nav-button"/>
+
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <!-- User Info and Logout -->
+
+        </HBox>
+
+        <!-- Main Content Area -->
+        <VBox spacing="20" styleClass="main-content">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <!-- Section Title -->
+            <VBox styleClass="profile-container" spacing="15">
+                <padding>
+                    <Insets top="20" right="20" bottom="10" left="20"/>
+                </padding>
+                <HBox alignment="CENTER_LEFT" spacing="20">
+                    <Label text="liste de Sponsorings" styleClass="section-title"/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                </HBox>
+            </VBox>
+
+            <!-- Content Area: Cards of Sponsorings -->
+            <ScrollPane fx:id="contentScrollPane" fitToWidth="true" VBox.vgrow="ALWAYS">
+                <content>
+                    <VBox fx:id="sponsoringContainer" spacing="15">
+                        <padding>
+                            <Insets top="20" right="20" bottom="20" left="20"/>
+                        </padding>
+
+                        <!-- Example of a Sponsoring Card -->
+                        <HBox styleClass="sponsoring-card" spacing="10">
+                            <Label text="Sponsoring 1" styleClass="sponsoring-title"/>
+                            <Region HBox.hgrow="ALWAYS"/>
+                            <Button text="View Details" fx:id="viewSponsoringButton" styleClass="sponsoring-button"/>
+                        </HBox>
+
+                        <!-- You will dynamically add other sponsoring cards here -->
+                    </VBox>
+                </content>
+            </ScrollPane>
+        </VBox>
+    </VBox>
+</AnchorPane>

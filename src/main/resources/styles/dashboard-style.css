@@ -1,0 +1,56 @@
+.sidebar {
+    -fx-background-color: white;
+    -fx-spacing: 20;
+    -fx-padding: 20 0;
+}
+
+.nav-header {
+    -fx-border-color: transparent transparent #e0e0e0 transparent;
+    -fx-border-width: 0 0 1px 0;
+}
+
+.brand-text {
+    -fx-font-family: "Playfair Display";
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.brand-icon {
+    -fx-font-size: 28px;
+}
+
+.user-name {
+    -fx-font-family: "Poppins";
+    -fx-font-weight: 600;
+    -fx-font-size: 14px;
+}
+
+.user-role {
+    -fx-font-family: "Poppins";
+    -fx-font-size: 12px;
+    -fx-text-fill: #666;
+}
+
+.sidebar-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #333;
+    -fx-font-family: "Poppins";
+    -fx-font-size: 14px;
+    -fx-alignment: center-left;
+    -fx-padding: 12px 20px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+}
+
+.sidebar-button:hover {
+    -fx-background-color: #f5f5f5;
+    -fx-cursor: hand;
+}
+
+.sidebar-button .bi {
+    -fx-font-family: "Bootstrap Icons";
+    -fx-font-size: 16px;
+}
+
+
+/* Add Bootstrap Icons font */

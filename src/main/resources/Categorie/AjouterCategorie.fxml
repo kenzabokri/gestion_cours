@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.DropShadow?>
+
+
+<?import javafx.geometry.Insets?>
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.Categorie.AjouterCategorieController"
+            stylesheets="@/styles/chic-theme.css"
+            styleClass="chic-beige">
+
+    <VBox alignment="CENTER"
+          spacing="25.0"
+          AnchorPane.bottomAnchor="30.0"
+          AnchorPane.leftAnchor="30.0"
+          AnchorPane.rightAnchor="30.0"
+          AnchorPane.topAnchor="30.0">
+
+        <!-- En-tête avec icône -->
+        <HBox alignment="CENTER" spacing="15">
+
+            <Text text="Ajouter une Catégorie" styleClass="chic-title">
+                <effect>
+                    <DropShadow color="rgba(122,92,88,0.15)" radius="3" offsetX="1" offsetY="1"/>
+                </effect>
+            </Text>
+        </HBox>
+
+        <!-- Formulaire dans une carte élégante -->
+        <StackPane styleClass="chic-card">
+            <GridPane hgap="15.0" vgap="15.0" styleClass="chic-form">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="120.0" prefWidth="150.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="150.0" prefWidth="250.0" />
+                </columnConstraints>
+
+                <children>
+                    <Label text="Nom Catégorie:" styleClass="chic-label" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                    <TextField fx:id="txtNomCategorie" styleClass="chic-input" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                    <Label text="Style:" styleClass="chic-label" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                    <TextField fx:id="txtStyleCategorie" styleClass="chic-input" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                    <Label text="Technique:" styleClass="chic-label" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                    <TextField fx:id="txtTechniqueCategorie" styleClass="chic-input" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                </children>
+            </GridPane>
+        </StackPane>
+
+        <!-- Boutons d'action - Version chic améliorée -->
+        <HBox alignment="CENTER" spacing="25.0" style="-fx-padding: 15 0 0 0;">
+            <!-- Bouton Ajouter -->
+            <Button onAction="#Ajouter" styleClass="chic-button chic-primary hover-effect">
+                <graphic>
+                    <Text text="✓" styleClass="button-icon"/>
+                </graphic>
+                <HBox.margin>
+                    <Insets right="5"/>
+                </HBox.margin>
+                Ajouter
+            </Button>
+
+            <!-- Bouton Afficher Liste -->
+            <Button onAction="#Afficher" styleClass="chic-button chic-ternary hover-effect">
+                <graphic>
+                    <Text text="☰" styleClass="button-icon"/>
+                </graphic>
+                Afficher Liste
+            </Button>
+        </HBox>
+    </VBox>
+</AnchorPane>

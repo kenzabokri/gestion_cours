@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.publicationsandcomments.EditPublicationController"
+            prefWidth="400" prefHeight="400" stylesheets="@/dashboard.css">
+
+    <VBox alignment="TOP_CENTER" spacing="10.0" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10">
+        <padding>
+            <Insets top="20" right="20" bottom="20" left="20"/>
+        </padding>
+
+        <Label text="Modifier la publication"
+               style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+        <Label text="Nom de la publication :" />
+        <TextField fx:id="nomField" promptText="Nom..." />
+
+        <Label text="Contenu :" />
+        <TextArea fx:id="contenuArea" promptText="Contenu..." prefRowCount="5"/>
+
+        <Label text="Image (chemin ou URL) :" />
+        <TextField fx:id="imageField" promptText="ex: image.jpg ou https://..." />
+
+        <Label text="Date de création :" />
+        <DatePicker fx:id="datePicker" />
+
+        <Button fx:id="updateButton"
+                text="Mettre à jour"
+                onAction="#handleUpdate"
+                style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold;" />
+    </VBox>
+</AnchorPane>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.frontend.ForumDashboardController">
+    <children>
+        <TableView fx:id="forumTable" layoutX="20" layoutY="20" prefWidth="760" prefHeight="400">
+            <columns>
+                <TableColumn fx:id="nomColumn" text="Nom" prefWidth="120"/>
+                <TableColumn fx:id="themeColumn" text="Thème" prefWidth="120"/>
+                <TableColumn fx:id="descriptionColumn" text="Description" prefWidth="150"/>
+                <TableColumn fx:id="imageColumn" text="Image" prefWidth="100"/>
+                <TableColumn fx:id="dateCreationColumn" text="Date de Création" prefWidth="150"/>
+                <TableColumn fx:id="actionsColumn" text="Actions" prefWidth="120"/>
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

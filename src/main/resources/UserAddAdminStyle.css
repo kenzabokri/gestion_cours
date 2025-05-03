@@ -1,0 +1,160 @@
+/* Base Styles */
+.root {
+    -fx-background-color: linear-gradient(to bottom right, #f8f9fa, #e9ecef);
+    -fx-font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Title Styles */
+.label {
+    -fx-text-fill: #2c3e50;
+    -fx-font-size: 14px;
+}
+
+.label.title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 20 0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0, 0, 1);
+}
+
+/* TextField Styles */
+.text-field, .password-field {
+    -fx-background-color: white;
+    -fx-background-radius: 5;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 5;
+    -fx-padding: 8 12;
+    -fx-font-size: 13px;
+    -fx-pref-width: 250;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #3498db;
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(52,152,219,0.2), 4, 0, 0, 0);
+}
+
+/* Checkbox Styles */
+.check-box {
+    -fx-text-fill: #2c3e50;
+    -fx-font-size: 13px;
+}
+
+.check-box .box {
+    -fx-background-color: white;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 3;
+}
+
+.check-box:selected .box {
+    -fx-background-color: #3498db;
+    -fx-border-color: #3498db;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: white;
+}
+
+/* Button Styles */
+.button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+    -fx-min-width: 100;
+}
+
+.button:hover {
+    -fx-background-color: #2980b9;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0, 0, 0);
+}
+
+.button:pressed {
+    -fx-background-color: #2573a7;
+}
+
+#cancelButton {
+    -fx-background-color: #e74c3c;
+}
+
+#cancelButton:hover {
+    -fx-background-color: #c0392b;
+}
+
+#uploadButton {
+    -fx-background-color: #2ecc71;
+}
+
+#uploadButton:hover {
+    -fx-background-color: #27ae60;
+}
+
+/* Grid Styles */
+.grid-pane {
+    -fx-hgap: 15;
+    -fx-vgap: 15;
+    -fx-padding: 20;
+    -fx-background-color: rgba(255, 255, 255, 0.8);
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+}
+
+/* Image Section Styles */
+.image-container {
+    -fx-padding: 20;
+    -fx-background-color: rgba(255, 255, 255, 0.8);
+    -fx-background-radius: 10;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 10;
+    -fx-border-width: 1;
+}
+
+#imageView {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0, 0, 1);
+}
+
+#imageLabel {
+    -fx-text-fill: #7f8c8d;
+    -fx-font-style: italic;
+}
+
+/* Error Label Styles */
+#errorLabel {
+    -fx-text-fill: #e74c3c;
+    -fx-font-size: 13px;
+    -fx-padding: 10 0;
+}
+
+/* Container Styles */
+.vbox {
+    -fx-background-color: white;
+    -fx-background-radius: 15;
+    -fx-padding: 30;
+    -fx-spacing: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 15, 0, 0, 2);
+}
+
+/* Animation Styles */
+.button {
+    -fx-transition: -fx-background-color 0.2s ease;
+}
+
+/* Responsive Layout */
+@media (max-width: 600px) {
+    .vbox {
+        -fx-padding: 15;
+    }
+
+    .text-field, .password-field {
+        -fx-pref-width: 200;
+    }
+
+    .button {
+        -fx-min-width: 80;
+        -fx-padding: 8 15;
+    }
+}
+/* Root and Background */

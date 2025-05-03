@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" stylesheets="@/gallery.css,@/dashboard.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.User.GalleryViewController">
+
+    <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+        <!-- Top Navigation Bar -->
+        <HBox alignment="CENTER_LEFT" spacing="20" styleClass="top-nav">
+            <padding>
+                <Insets bottom="10" left="20" right="20" top="10" />
+            </padding>
+
+            <!-- Logo -->
+            <ImageView fitHeight="40" fitWidth="40" preserveRatio="true">
+                <Image url="@/uploads/logo2.jpg" />
+            </ImageView>
+
+            <!-- Navigation Buttons -->
+            <Button fx:id="profileButton" styleClass="nav-button" text="My Profile" />
+            <Button fx:id="eventsButton" styleClass="nav-button" text="My Events" />
+            <Button fx:id="galleryButton" styleClass="nav-button" text="My Gallery" />
+         <Button fx:id="coursbutton" mnemonicParsing="false" text="mes cours" />
+
+            <Region HBox.hgrow="ALWAYS" /> <!-- Spacer -->
+
+            <!-- User Info and Logout -->
+            <HBox alignment="CENTER" spacing="10">
+                <Label fx:id="userNameLabel" styleClass="user-name" />
+                <ImageView fx:id="userImage" fitHeight="45" fitWidth="45" preserveRatio="true" styleClass="user-avatar">
+                    <clip>
+                        <Circle centerX="22.5" centerY="22.5" radius="22.5" />
+                    </clip>
+                </ImageView>
+                <Button onAction="#handleLogout" styleClass="logout-button" text="Logout" />
+            </HBox>
+        </HBox>
+
+        <!-- Main Content ScrollPane -->
+        <ScrollPane fitToWidth="true" styleClass="main-scroll-pane" VBox.vgrow="ALWAYS">
+            <VBox spacing="20">
+
+                <!-- Hero Section -->
+                <StackPane styleClass="hero-section">
+                    <ImageView fitWidth="1200" preserveRatio="true">
+                        <Image url="@/uploads/default-avatar.jpg" />
+                    </ImageView>
+                    <VBox alignment="CENTER" styleClass="hero-content">
+                        <Label styleClass="hero-title" text="Welcome to ArtFlow Gallery" />
+                        <Label styleClass="hero-subtitle" text="Discover the World of Digital Art" />
+                    </VBox>
+                </StackPane>
+
+                <!-- Featured Collections -->
+                <VBox spacing="20" styleClass="section-container">
+                    <padding>
+                        <Insets bottom="30" left="40" right="40" top="30" />
+                    </padding>
+
+                    <Label styleClass="section-title" text="Featured Collections" />
+
+                    <GridPane hgap="20" vgap="20">
+                        <columnConstraints>
+                            <ColumnConstraints percentWidth="33.33" />
+                            <ColumnConstraints percentWidth="33.33" />
+                            <ColumnConstraints percentWidth="33.33" />
+                        </columnConstraints>
+
+                        <!-- Collection 1 -->
+                        <VBox styleClass="collection-card" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                            <ImageView fitHeight="200" fitWidth="300" preserveRatio="true">
+                                <Image url="@/uploads/default-avatar.jpg" />
+                            </ImageView>
+                            <Label styleClass="collection-title" text="Modern Art Collection" />
+                            <Label styleClass="collection-description" text="Explore contemporary masterpieces" />
+                        </VBox>
+
+                        <!-- Collection 2 -->
+                        <VBox styleClass="collection-card" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                            <ImageView fitHeight="200" fitWidth="300" preserveRatio="true">
+                                <Image url="@/uploads/default-avatar.jpg" />
+                            </ImageView>
+                            <Label styleClass="collection-title" text="Classical Paintings" />
+                            <Label styleClass="collection-description" text="Timeless artistic excellence" />
+                        </VBox>
+
+                        <!-- Collection 3 -->
+                        <VBox styleClass="collection-card" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                            <ImageView fitHeight="200" fitWidth="300" preserveRatio="true">
+                                <Image url="@/uploads/default-avatar.jpg" />
+                            </ImageView>
+                            <Label styleClass="collection-title" text="Digital Innovations" />
+                            <Label styleClass="collection-description" text="The future of artistic expression" />
+                        </VBox>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
+                    </GridPane>
+                </VBox>
+
+                <!-- Featured Artists -->
+                <VBox spacing="20" styleClass="section-container">
+                    <padding>
+                        <Insets bottom="30" left="40" right="40" top="30" />
+                    </padding>
+
+                    <Label styleClass="section-title" text="Featured Artists" />
+
+                    <HBox alignment="CENTER" spacing="20">
+                        <!-- Artist 1 -->
+                        <VBox alignment="CENTER" styleClass="artist-card">
+                            <ImageView fitHeight="150" fitWidth="150" styleClass="artist-image">
+                                <Image url="@/uploads/default-avatar.jpg" />
+                            </ImageView>
+                            <Label styleClass="artist-name" text="Sarah Johnson" />
+                            <Label styleClass="artist-specialty" text="Modern Art" />
+                        </VBox>
+
+                        <!-- Artist 2 -->
+                        <VBox alignment="CENTER" styleClass="artist-card">
+                            <ImageView fitHeight="150" fitWidth="150" styleClass="artist-image">
+                                <Image url="@/uploads/default-avatar.jpg" />
+                            </ImageView>
+                            <Label styleClass="artist-name" text="Michael Chen" />
+                            <Label styleClass="artist-specialty" text="Digital Art" />
+                        </VBox>
+
+                        <!-- Artist 3 -->
+                        <VBox alignment="CENTER" styleClass="artist-card">
+                            <ImageView fitHeight="150" fitWidth="150" styleClass="artist-image">
+                                <Image url="@/uploads/default-avatar.jpg" />
+                            </ImageView>
+                            <Label styleClass="artist-name" text="Emma Davies" />
+                            <Label styleClass="artist-specialty" text="Abstract Art" />
+                        </VBox>
+                    </HBox>
+                </VBox>
+
+                <!-- Latest Exhibitions -->
+                <VBox spacing="20" styleClass="section-container">
+                    <padding>
+                        <Insets bottom="30" left="40" right="40" top="30" />
+                    </padding>
+
+                    <Label styleClass="section-title" text="Current Exhibitions" />
+
+                    <HBox spacing="20">
+                        <!-- Exhibition 1 -->
+                        <VBox styleClass="exhibition-card">
+                            <ImageView fitHeight="200" fitWidth="350" preserveRatio="true">
+                                <Image url="@/uploads/default-avatar.jpg" />
+                            </ImageView>
+                            <VBox styleClass="exhibition-info">
+                                <Label styleClass="exhibition-title" text="Digital Renaissance" />
+                                <Label styleClass="exhibition-date" text="April 15 - May 30, 2024" />
+                                <Label styleClass="exhibition-description" text="Experience the fusion of classical art and modern technology" />
+                            </VBox>
+                        </VBox>
+
+                        <!-- Exhibition 2 -->
+                        <VBox styleClass="exhibition-card">
+                            <ImageView fitHeight="200" fitWidth="350" preserveRatio="true">
+                                <Image url="@/uploads/default-avatar.jpg" />
+                            </ImageView>
+                            <VBox styleClass="exhibition-info">
+                                <Label styleClass="exhibition-title" text="Colors of Nature" />
+                                <Label styleClass="exhibition-date" text="May 1 - June 15, 2024" />
+                                <Label styleClass="exhibition-description" text="A celebration of natural beauty through artistic expression" />
+                            </VBox>
+                        </VBox>
+                    </HBox>
+                </VBox>
+            </VBox>
+        </ScrollPane>
+    </VBox>
+</AnchorPane>

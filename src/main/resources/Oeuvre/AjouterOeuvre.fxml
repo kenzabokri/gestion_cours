@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21.0.2"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.Oeuvre.AjouterOeuvreController"
+            stylesheets="@../styles/styles1.css"
+            styleClass="form-root">
+
+    <!-- Top: Navbar fixe -->
+    <top>
+        <fx:include source="/Oeuvre/Navbar.fxml" fx:id="navbar"/>
+    </top>
+
+    <!-- Centre: Contenu principal -->
+    <center>
+        <VBox styleClass="main-container">
+            <!-- En-tête -->
+            <HBox alignment="CENTER_LEFT" spacing="10" styleClass="form-header">
+                <Label styleClass="form-icon" text=""/>
+                <Label styleClass="form-title" text="Nouvelle oeuvre"/>
+            </HBox>
+
+            <Separator styleClass="title-separator"/>
+
+            <!-- Carte de formulaire -->
+            <StackPane styleClass="form-card">
+                <GridPane hgap="12" vgap="12" styleClass="form-grid">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="NEVER" minWidth="120"/>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="180"/>
+                    </columnConstraints>
+
+                    <!-- Contenu du formulaire -->
+                    <children>
+                        <!-- Ligne 1: Nom -->
+                        <Label styleClass="field-label" text="Nom"/>
+                        <TextField fx:id="nomField" styleClass="form-input" GridPane.columnIndex="1"/>
+
+                        <!-- Ligne 2: Description -->
+                        <Label styleClass="field-label" text="Description" GridPane.rowIndex="1"/>
+                        <TextArea fx:id="descriptionField" styleClass="form-textarea" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+                        <!-- Ligne 3: Date -->
+                        <Label styleClass="field-label" text="Date création" GridPane.rowIndex="2"/>
+                        <DatePicker fx:id="dateCreationPicker" styleClass="form-datepicker" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+                        <!-- Ligne 4: Catégorie -->
+                        <Label styleClass="field-label" text="Catégorie" GridPane.rowIndex="3"/>
+                        <HBox spacing="8" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                            <ComboBox fx:id="categorieComboBox" styleClass="form-combo"/>
+                            <Button onAction="#redirectToAddCategory" styleClass="icon-button" text="+"/>
+                        </HBox>
+
+                        <!-- Ligne 5: Signature -->
+                        <Label styleClass="field-label" text="Signature" GridPane.rowIndex="4"/>
+                        <CheckBox fx:id="signatureCheckbox" styleClass="form-checkbox" text="oeuvre signée" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+                        <!-- Ligne 6: Image -->
+                        <Label styleClass="field-label" text="Image" GridPane.rowIndex="5"/>
+                        <HBox alignment="CENTER_LEFT" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                            <VBox spacing="4">
+                                <Button fx:id="uploadButton" onAction="#handleChooseImage" styleClass="browse-button" text="Parcourir"/>
+                                <Label fx:id="imageNameLabel" styleClass="file-label" text="Aucun fichier"/>
+                                <Label styleClass="hint-label" text="JPG/PNG/WebP (5MB max)"/>
+                            </VBox>
+                            <ImageView fx:id="imagePreview" styleClass="image-preview"/>
+                        </HBox>
+                    </children>
+                </GridPane>
+            </StackPane>
+
+            <!-- Message de statut -->
+            <Label fx:id="statusLabel" styleClass="status-message"/>
+
+            <!-- Boutons d'action -->
+            <HBox styleClass="button-container">
+                <Button styleClass="secondary-button" text="Annuler"/>
+                <Button onAction="#handleAjouter" styleClass="primary-button" text="Enregistrer"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

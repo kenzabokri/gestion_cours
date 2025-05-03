@@ -1,0 +1,19 @@
+.primary-button {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+    -fx-padding: 8 16;
+    -fx-cursor: hand;
+}
+
+.primary-button:hover {
+    -fx-background-color: #1976D2;
+}
+
+.text-field, .password-field {
+    -fx-pref-width: 300;
+    -fx-padding: 8;
+}
+
+.error-label {
+    -fx-text-fill: #F44336;
+}

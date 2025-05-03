@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import java.net.URL?>
+
+<HBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.Categorie.OeuvreByCategorieController"
+      spacing="0">
+
+    <!-- Sidebar -->
+    <fx:include source="sideBar.fxml" fx:id="sidebar"/>
+
+    <!-- Contenu principal -->
+    <VBox styleClass="main-content" HBox.hgrow="ALWAYS">
+        <AnchorPane>
+            <VBox spacing="15"
+                  AnchorPane.leftAnchor="20"
+                  AnchorPane.rightAnchor="20"
+                  AnchorPane.topAnchor="20"
+                  AnchorPane.bottomAnchor="20">
+
+                <!-- Header Section -->
+                <HBox alignment="CENTER_LEFT" spacing="15" styleClass="header-box">
+                    <Label text="Gestion des oeuvres" styleClass="header-label" />
+                    <HBox spacing="10" styleClass="button-group">
+                        <Button onAction="#redirectToAddCategory" text="Nouvelle Catégorie" styleClass="primary-button" />
+                        <Button onAction="#redirectToAddOeuvre" text="Nouvelle Œuvre" styleClass="action-button" />
+                    </HBox>
+                </HBox>
+
+                <!-- Barre de filtrage -->
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <ComboBox fx:id="categoryComboBox"
+                              promptText="Toutes les catégories"
+                              styleClass="category-combo"
+                              prefWidth="200"/>
+
+                    <TextField fx:id="searchField"
+                               promptText="Rechercher par nom..."
+                               styleClass="search-field"
+                               prefWidth="300"/>
+                </HBox>
+
+                <!-- Galerie des oeuvres -->
+                <ScrollPane fitToWidth="true" hbarPolicy="NEVER">
+                    <content>
+                        <FlowPane fx:id="oeuvresContainer"
+                                  hgap="20"
+                                  vgap="20"
+                                  prefWrapLength="1000"/>
+                    </content>
+                </ScrollPane>
+
+            </VBox>
+        </AnchorPane>
+
+        <stylesheets>
+            <URL value="@/styles/Dash.css"/>
+        </stylesheets>
+    </VBox>
+</HBox>

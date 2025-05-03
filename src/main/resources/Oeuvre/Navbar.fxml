@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+
+<HBox fx:id="navbar" alignment="CENTER_LEFT" prefHeight="70" spacing="40" style="-fx-padding: 10 30;" styleClass="navbar" xmlns="http://javafx.com/javafx/21.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Categorie.NavbarController">
+
+    <stylesheets>
+        <URL value="@/styles/front.css" />
+    </stylesheets>
+
+    <!-- Brand Section -->
+    <HBox alignment="CENTER_LEFT" spacing="12" styleClass="nav-header">
+      <ImageView fitHeight="100.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/artflow-logo.png" />
+         </image>
+      </ImageView>
+    </HBox>
+
+    <!-- Navigation Buttons -->
+    <HBox alignment="CENTER_LEFT" spacing="25" style="-fx-padding: 0 30;">
+        <Button fx:id="btnDashboard" styleClass="nav-button" text="Home" />
+        <Button fx:id="btnOeuvres" styleClass="nav-button" text="Oeuvres" />
+        <Button fx:id="btnCategories" styleClass="nav-button" text="Catégories" />
+    </HBox>
+
+    <Region fx:id="spacer" HBox.hgrow="ALWAYS" />
+
+    <!-- User Profile -->
+    <HBox alignment="CENTER_RIGHT" spacing="12" style="-fx-padding: 0 10;">
+        <ImageView fitHeight="42" fitWidth="42">
+            <image>
+                <Image url="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/270px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg" />
+            </image>
+            <clip>
+                <Circle centerX="21" centerY="21" radius="21" />
+            </clip>
+        </ImageView>
+        <VBox alignment="CENTER_LEFT" spacing="2">
+            <Label styleClass="user-name" text="Admin" />
+            <Label styleClass="user-role" text="Administrator" />
+        </VBox>
+    </HBox>
+
+    <effect>
+        <DropShadow color="rgba(0,0,0,0.15)" offsetY="2" radius="5" />
+    </effect>
+
+</HBox>

@@ -1,0 +1,157 @@
+/* ===== VARIABLES (From custom-gallery.css) ===== */
+.root {
+    -primary-color: #1a1a1a;
+    -accent-color: #9d8665;
+    -text-color: #333;
+    -light-text: #fff;
+    -secondary-color: #80d0c7;
+    -section-bg-color: #f0f8ff;
+    -custom-btn-bg-color: #80d0c7;
+    -border-color: #7fffd4;
+    -gold-accent: #c9a959;
+    -chic-beige: #FAF3F0;
+    -chic-rose: rgba(236, 217, 199, 0.82);
+    -chic-maroon: #7A5C58;
+}
+
+/* ===== CHIC THEME ===== */
+.chic-beige {
+    -fx-background-color: -chic-beige;
+}
+
+.chic-rose {
+    -fx-background-color: -chic-rose;
+}
+
+.chic-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-fill: -chic-maroon;
+    -fx-font-family: "Playfair Display";
+}
+
+.chic-table {
+    -fx-background-color: -light-text;
+    -fx-border-color: #E3C4C0;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(122,92,88,0.1), 10, 0, 0, 5);
+}
+
+/* ===== MODERN THEME COMPONENTS ===== */
+.table-view {
+    -fx-background-color: -light-text;
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 15, 0, 0, 2);
+}
+
+.button {
+    -fx-background-color: -accent-color;
+    -fx-text-fill: -light-text;
+    -fx-font-size: 13px;
+    -fx-background-radius: 25;
+}
+
+/* ===== COMBINED DARK MODE ===== */
+.dark-mode {
+    -fx-background-color: #2A2A2A;
+    -text-color: #ECECEC;
+    -section-bg-color: #3A3A3A;
+}
+
+.dark-mode .chic-title {
+    -fx-fill: #E3C4C0;
+}
+
+.dark-mode .table-view {
+    -fx-background-color: #3A3A3A;
+    -fx-border-color: #5A4A42;
+}
+
+/* ===== UNIVERTSAL COMPONENTS ===== */
+.search-box {
+    -fx-background-color: -light-text;
+    -fx-border-color: -border-color;
+    -fx-font-family: "Poppins";
+}
+
+.status-badge {
+    -fx-font-family: "Poppins";
+    -fx-font-weight: 500;
+}
+
+/* ===== BUTTON VARIANTS ===== */
+.chic-button {
+    -fx-background-color: -chic-maroon;
+    -fx-background-radius: 20px;
+    -fx-effect: dropshadow(gaussian, rgba(122,92,88,0.2), 5, 0, 1, 2);
+}
+
+.button-primary {
+    -fx-background-color: -gold-accent;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media -fx-xxl {
+    .chic-title {
+        -fx-font-size: 28px;
+    }
+}.chic-title {
+     -fx-font-size: 28px;
+     -fx-font-weight: bold;
+     -fx-fill: #5A3E36;
+ }
+
+.chic-separator {
+    -fx-background-color: #CBB8A9;
+    -fx-pref-height: 1;
+    -fx-opacity: 0.6;
+    -fx-max-width: 200px;
+}
+
+.chic-card {
+    -fx-background-color: #FFFFFF;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 10, 0.2, 0, 3);
+}
+
+.chic-form {
+    -fx-font-size: 14px;
+}
+
+.chic-label {
+    -fx-text-fill: #5A3E36;
+    -fx-font-weight: 600;
+}
+
+.chic-input {
+    -fx-background-color: #F7F3EF;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-border-color: transparent;
+    -fx-padding: 8;
+}
+
+.chic-button {
+    -fx-font-size: 14px;
+    -fx-padding: 10 20;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+}
+
+.chic-primary {
+    -fx-background-color: #8C6B5A;
+    -fx-text-fill: white;
+}
+
+.chic-ternary {
+    -fx-background-color: #E0D6CE;
+    -fx-text-fill: #5A3E36;
+}
+
+.hover-effect:hover {
+    -fx-opacity: 0.85;
+    -fx-translate-y: -1;
+}

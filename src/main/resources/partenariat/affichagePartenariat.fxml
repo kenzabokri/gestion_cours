@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane stylesheets="@/css/css.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Partenariat.AffichagePartenariat">
+
+    <!-- NAVIGATION À GAUCHE -->
+    <left>
+        <VBox alignment="TOP_CENTER" prefWidth="180.0" spacing="15.0" styleClass="nav-bar">
+            <children>
+                <Button text="Dashboard" />
+                <Button text="Partenariats" />
+                <Button text="Sponsoring" />
+            </children>
+        </VBox>
+    </left>
+
+    <!-- TABLEVIEW AU CENTRE -->
+    <center>
+        <AnchorPane prefHeight="623.0" prefWidth="846.0">
+            <children>
+                <TableView fx:id="tablePartenariat" layoutX="10.0" layoutY="32.0" prefHeight="538.0" prefWidth="980.0">
+                    <columns>
+                        <TableColumn fx:id="colId" text="ID" />
+                        <TableColumn fx:id="colNom" text="Nom" />
+                        <TableColumn fx:id="colType" text="Type" />
+                        <TableColumn fx:id="colDesc" prefWidth="120.0" text="Description" />
+                        <TableColumn fx:id="colAdresse" prefWidth="100.0" text="Adresse" />
+                        <TableColumn fx:id="colLogo" prefWidth="100.0" text="Logo" />
+                        <TableColumn fx:id="colPhone" prefWidth="100.0" text="Téléphone" />
+                        <TableColumn fx:id="colDebut" prefWidth="100.0" text="Date Début" />
+                        <TableColumn fx:id="colFin" prefWidth="100.0" text="Date Fin" />
+                        <TableColumn fx:id="colActions" prefWidth="150.0" text="Actions" />
+                    </columns>
+                </TableView>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

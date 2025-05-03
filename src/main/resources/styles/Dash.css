@@ -1,0 +1,162 @@
+/* ================ PALETTE UNIFIÉE ================ */
+.root {
+    -fx-primary-dark: #1a1a1a;
+    -fx-primary-accent: #9d8665;
+    -fx-primary-light: #f8f8f8;
+    -fx-secondary-accent: #80d0c7;
+    -fx-gold-accent: #c9a959;
+    -fx-text-dark: #333333;
+    -fx-text-light: #ffffff;
+    -fx-border-light: #e0e0e0;
+
+    -fx-museum-dark: #1a1a1a; /* Utilisation directe de la couleur */
+    -fx-museum-gold: #c9a959;
+    -fx-museum-beige: #f8f8f8;
+    -fx-museum-accent: #9d8665;
+}
+
+/* ================ STRUCTURE COMMUNE ================ */
+.main-container {
+    -fx-background-color: #f8f8f8; /* Remplacer par la couleur directe */
+    -fx-padding: 30px;
+    -fx-spacing: 25px;
+}
+
+.header-box {
+    -fx-background-color: #1a1a1a; /* Remplacer par la couleur directe */
+    -fx-padding: 15px 25px;
+    -fx-background-radius: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 6, 0, 0, 2);
+}
+
+.header-label {
+    -fx-font-family: "Playfair Display";
+    -fx-font-size: 24px;
+    -fx-text-fill: #ffffff; /* Remplacer par la couleur directe */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 0, 0.2, 0, 1);
+}
+
+/* ================ COMPOSANTS COMMUNS ================ */
+.category-combo {
+    -fx-background-color: white;
+    -fx-background-radius: 4px;
+    -fx-border-color: #c9a959; /* Remplacer par la couleur directe */
+    -fx-border-width: 1.5px;
+    -fx-prompt-text-fill: derive(#c9a959, 20%);
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 14px;
+}
+
+.primary-button {
+    -fx-background-color: #c9a959; /* Remplacer par la couleur directe */
+    -fx-text-fill: #1a1a1a; /* Remplacer par la couleur directe */
+    -fx-font-weight: 600;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0, 0, 1);
+}
+
+/* ================ CARTES OEUVRE ================ */
+.oeuvre-card {
+    -fx-background-color: white;
+    -fx-background-radius: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 12, 0.2, 0, 2);
+    -fx-border-color: linear-gradient(to bottom, #9d8665, #c9a959); /* Remplacer par les couleurs directes */
+}
+
+.oeuvre-card:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 16, 0.3, 0, 4);
+    -fx-border-color: #c9a959; /* Remplacer par la couleur directe */
+}
+
+/* ================ TABLEAU ================ */
+.data-table {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 8, 0, 0, 2);
+}
+
+.data-table .column-header-background {
+    -fx-background-color: linear-gradient(to right, #1a1a1a, #9d8665); /* Remplacer par les couleurs directes */
+}
+
+/* ================ SCROLLBAR ================ */
+.scroll-bar .thumb {
+    -fx-background-color: derive(#1a1a1a, 60%);
+    -fx-opacity: 0.4;
+}
+
+/* ================ TRANSITIONS ================ */
+.oeuvre-card, .data-table .table-row-cell {
+    -fx-transition: all 0.3s ease;
+}
+.oeuvre-card {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 5px;
+    -fx-padding: 10px;
+}
+
+.edit-button {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}
+
+.delete-button {
+    -fx-background-color: #ff5252;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}
+
+.button-box {
+    -fx-alignment: center-right;
+}
+
+.nav-item {
+    -fx-background-color: transparent;
+    -fx-text-fill: #C5CAE9;
+    -fx-font-family: "Poppins SemiBold";
+    -fx-font-size: 14px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 12px 20px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-graphic-text-gap: 12px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 2, 0, 0, 1);
+    -fx-transition: all 0.3s ease;
+}
+
+.nav-item:hover {
+    -fx-background-color: #3C3F51;
+    -fx-text-fill: #ffffff;
+}
+
+.nav-item:selected {
+    -fx-background-color: linear-gradient(to right, #9D8665, #C9A959);
+    -fx-text-fill: #ffffff;
+}
+
+.sidebar-header {
+    -fx-padding: 30px 0 25px 0;
+    -fx-background-color: #1F2229;
+    -fx-border-color: transparent transparent #3A3F4B transparent;
+    -fx-border-width: 0 0 1px 0;
+}
+
+.sidebar-footer {
+    -fx-padding: 25px;
+    -fx-background-color: #1F2229;
+    -fx-border-color: #3A3F4B transparent transparent transparent;
+    -fx-border-width: 1px 0 0 0;
+}
+
+.logout-btn {
+    -fx-background-color: #2E3139;
+    -fx-text-fill: #F5F5F5;
+    -fx-font-size: 13px;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px 20px;
+    -fx-font-family: "Poppins SemiBold";
+}
+
+.logout-btn:hover {
+    -fx-background-color: #3C404A;
+}

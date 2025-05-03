@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" stylesheets="@/css/css.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Partenariat.AfficherSponsoring">
+    <!-- NAVIGATION À GAUCHE -->
+    <left>
+        <VBox alignment="TOP_CENTER" prefWidth="180.0" spacing="15.0" styleClass="nav-bar">
+            <children>
+                <Button text="Dashboard" />
+                <Button text="Partenariats" />
+                <Button text="Sponsoring" />
+            </children>
+        </VBox>
+    </left>
+
+    <center>
+        <AnchorPane prefHeight="623.0" prefWidth="846.0">
+            <children>
+                <TableView fx:id="tableSponsoring" layoutX="10.0" layoutY="32.0" prefHeight="538.0" prefWidth="600.0">
+                    <columns>
+                        <TableColumn fx:id="colId" text="ID" />
+                        <TableColumn fx:id="colType" text="Type" />
+                        <TableColumn fx:id="colPartenariat" text="Partenariat" />
+                        <TableColumn fx:id="colDateDebut" text="Date Début" />
+                        <TableColumn fx:id="colDateFin" text="Date Fin" />
+                        <TableColumn fx:id="col_action" text="Actions" />
+                    </columns>
+                </TableView>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

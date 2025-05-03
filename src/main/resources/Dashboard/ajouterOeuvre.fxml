@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import java.net.URL?>
+
+<HBox xmlns="http://javafx.com/javafx/21.0.2"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.Oeuvre.AjouterOeuvreController"
+      spacing="0">
+
+    <!-- Barre latérale -->
+    <fx:include source="sideBar.fxml" fx:id="sidebar"/>
+
+    <!-- Contenu principal -->
+    <VBox styleClass="main-content" HBox.hgrow="ALWAYS">
+        <AnchorPane>
+            <VBox spacing="15" AnchorPane.topAnchor="20" AnchorPane.bottomAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20">
+
+                <!-- Titre -->
+                <HBox alignment="CENTER_LEFT" spacing="15" styleClass="header-box">
+                    <Label text="Ajouter une Oeuvre" styleClass="header-label" />
+                </HBox>
+
+                <Separator styleClass="title-separator" />
+
+                <!-- Formulaire -->
+                <GridPane hgap="12" vgap="12" styleClass="form-grid">
+                    <columnConstraints>
+                        <ColumnConstraints minWidth="120" />
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="180" />
+                    </columnConstraints>
+
+                    <!-- Nom -->
+                    <Label text="Nom" styleClass="field-label" />
+                    <TextField fx:id="nomField" styleClass="form-input" GridPane.columnIndex="1" />
+
+                    <!-- Description -->
+                    <Label text="Description" styleClass="field-label" GridPane.rowIndex="1" />
+                    <TextArea fx:id="descriptionField" prefRowCount="2" styleClass="form-textarea" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                    <!-- Date -->
+                    <Label text="Date création" styleClass="field-label" GridPane.rowIndex="2" />
+                    <DatePicker fx:id="dateCreationPicker" styleClass="form-datepicker" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                    <!-- Catégorie -->
+                    <Label text="Catégorie" styleClass="field-label" GridPane.rowIndex="3" />
+                    <HBox spacing="8" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                        <ComboBox fx:id="categorieComboBox" prefWidth="150" styleClass="form-combo" />
+                        <Button onAction="#redirectToAddCategoryDash" text="+" styleClass="icon-button" />
+                    </HBox>
+
+                    <!-- Signature -->
+                    <Label text="Signature" styleClass="field-label" GridPane.rowIndex="4" />
+                    <CheckBox fx:id="signatureCheckbox" text="oeuvre signée" styleClass="form-checkbox" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                    <!-- Image -->
+                    <Label text="Image" styleClass="field-label" GridPane.rowIndex="5" />
+                    <HBox spacing="10" alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                        <VBox spacing="4">
+                            <Button fx:id="uploadButton" text="Parcourir" onAction="#handleChooseImage" styleClass="browse-button" />
+                            <Label fx:id="imageNameLabel" text="Aucun fichier" styleClass="file-label" />
+                            <Label text="JPG/PNG/WebP (5MB max)" styleClass="hint-label" />
+                        </VBox>
+                        <ImageView fx:id="imagePreview" fitWidth="60" fitHeight="60" preserveRatio="true" styleClass="image-preview" />
+                    </HBox>
+                </GridPane>
+
+                <!-- Status -->
+                <Label fx:id="statusLabel" styleClass="status-message" />
+
+                <!-- Boutons -->
+                <HBox alignment="CENTER_RIGHT" spacing="12">
+                    <Button text="Annuler" styleClass="secondary-button" />
+                    <Button text="Enregistrer" onAction="#handleAjouterDash" styleClass="primary-button" />
+                </HBox>
+            </VBox>
+        </AnchorPane>
+    </VBox>
+
+    <!-- CSS -->
+    <stylesheets>
+        <URL value="@../styles/Dash.css" />
+    </stylesheets>
+</HBox>

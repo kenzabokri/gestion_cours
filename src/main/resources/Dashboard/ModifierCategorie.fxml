@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.net.URL?>
+
+<HBox xmlns="http://javafx.com/javafx/11.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.Categorie.ModifierCategorieController"
+      spacing="0">
+
+    <!-- Barre latérale -->
+    <fx:include source="sideBar.fxml" fx:id="sidebar"/>
+
+    <!-- Contenu principal -->
+    <VBox styleClass="main-content" HBox.hgrow="ALWAYS">
+        <AnchorPane>
+            <VBox spacing="15" AnchorPane.topAnchor="20" AnchorPane.bottomAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20">
+
+                <!-- Titre -->
+                <HBox alignment="CENTER_LEFT" spacing="15" styleClass="header-box">
+                    <Label text="Modifier une Catégorie" styleClass="header-label" />
+                </HBox>
+
+                <Separator styleClass="title-separator" />
+
+                <!-- Formulaire -->
+                <GridPane hgap="12" vgap="12" styleClass="form-grid">
+                    <columnConstraints>
+                        <ColumnConstraints minWidth="120" />
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="180" />
+                    </columnConstraints>
+
+                    <!-- Nom Catégorie -->
+                    <Label text="Nom Catégorie" styleClass="field-label" />
+                    <TextField fx:id="txtNomCategorie" styleClass="form-input" GridPane.columnIndex="1" />
+
+                    <!-- Style -->
+                    <Label text="Style" styleClass="field-label" GridPane.rowIndex="1" />
+                    <TextField fx:id="txtStyleCategorie" styleClass="form-input" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                    <!-- Technique -->
+                    <Label text="Technique" styleClass="field-label" GridPane.rowIndex="2" />
+                    <TextField fx:id="txtTechniqueCategorie" styleClass="form-input" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                </GridPane>
+
+                <!-- Status -->
+                <Label fx:id="statusLabel" styleClass="status-message" />
+
+                <!-- Boutons -->
+                <HBox alignment="CENTER_RIGHT" spacing="12">
+                    <Button text="Annuler" onAction="#annuler" styleClass="secondary-button" />
+                    <Button text="Modifier" onAction="#modifier" styleClass="primary-button" />
+                </HBox>
+            </VBox>
+        </AnchorPane>
+    </VBox>
+
+    <!-- CSS -->
+    <stylesheets>
+        <URL value="@../styles/Dash.css" />
+    </stylesheets>
+</HBox>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="657.0" prefWidth="600.0" stylesheets="@/UserAddAdminStyle.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.User.AddUserAdminController">
+
+    <VBox alignment="CENTER" spacing="20" styleClass="main-container" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+
+        <!-- Header -->
+        <VBox alignment="CENTER" spacing="10" styleClass="header-container">
+            <Label styleClass="page-title" text="Add New User" />
+            <Label styleClass="subtitle" text="Fill in the details below to create a new user account" />
+        </VBox>
+
+        <!-- Form Container -->
+        <VBox spacing="25" styleClass="form-container">
+
+            <!-- User Details Section -->
+            <VBox spacing="20" styleClass="section">
+                <Label styleClass="section-header" text="User Information" />
+
+                <GridPane hgap="15" styleClass="input-grid" vgap="15">
+                    <columnConstraints>
+                        <ColumnConstraints minWidth="100" prefWidth="120" />
+                        <ColumnConstraints hgrow="ALWAYS" />
+                    </columnConstraints>
+
+                    <!-- Name Field -->
+                    <Label styleClass="field-label" text="Name *" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                    <TextField fx:id="txtnom" promptText="Enter last name" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                    <!-- First Name Field -->
+                    <Label styleClass="field-label" text="First Name *" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                    <TextField fx:id="txtprenom" promptText="Enter first name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                    <!-- Email Field -->
+                    <Label styleClass="field-label" text="Email *" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                    <TextField fx:id="txtmail" promptText="Enter email address" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                    <!-- Password Field -->
+                    <Label styleClass="field-label" text="Password *" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                    <PasswordField fx:id="txtpass" promptText="Enter password" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+                </GridPane>
+            </VBox>
+
+            <!-- Roles Section -->
+            <VBox spacing="15" styleClass="section">
+                <Label styleClass="section-header" text="User Roles *" />
+                <HBox spacing="20" styleClass="roles-container">
+                    <CheckBox fx:id="adminCheck" styleClass="role-checkbox" text="Administrator" />
+                    <CheckBox fx:id="memberCheck" styleClass="role-checkbox" text="Member" />
+                    <CheckBox fx:id="artistCheck" styleClass="role-checkbox" text="Artist" />
+                </HBox>
+            </VBox>
+             <VBox alignment="CENTER" spacing="10" styleClass="upload-container">
+                 <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="150.0" preserveRatio="true" styleClass="profile-image" />
+                 <Label fx:id="imageLabel" styleClass="image-label" text="No image selected" />
+                 <Button fx:id="uploadButton" onAction="#uploadImage" styleClass="upload-button" text="Upload Image" />
+             </VBox>
+
+            <!-- Image Upload Section -->
+            <VBox spacing="15" styleClass="image-section">
+                <Label styleClass="section-header" text="Profile Picture" />
+            </VBox>
+             <Button fx:id="addButton" onAction="#handleAdd" styleClass="primary-button" text="Create User" />
+             <Button fx:id="cancelButton" onAction="#handleCancel" styleClass="cancel-button" text="Cancel" />
+
+            <!-- Error Message -->
+            <Label fx:id="errorLabel" styleClass="error-message" visible="false" wrapText="true" />
+
+            <!-- Action Buttons -->
+            <HBox alignment="CENTER" spacing="15" styleClass="button-container" />
+        </VBox>
+    </VBox>
+</AnchorPane>

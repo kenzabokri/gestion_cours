@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@/dashboard.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CoursMateriel.CoursMaterielController">
+   <children>
+      <ComboBox fx:id="comboBoxCours" layoutX="102.0" layoutY="52.0" prefWidth="150.0" />
+      <ComboBox fx:id="comboBoxMateriel" layoutX="291.0" layoutY="52.0" prefWidth="150.0" />
+      <Button fx:id="buttonAjouter" layoutX="239.0" layoutY="115.0" mnemonicParsing="false" onAction="#ajouterAssociation" text="Affecter" />
+      <TableView fx:id="tableViewAssociations" layoutX="36.0" layoutY="176.0" prefHeight="200.0" prefWidth="478.0">
+        <columns>
+          <TableColumn fx:id="colNomCours" prefWidth="75.0" text="Cours" />
+          <TableColumn fx:id="colNomMateriel" prefWidth="75.0" text="Materiel" />
+            <TableColumn fx:id="colSupprimer" prefWidth="135.99993896484375" text="Supprimer" />
+            <TableColumn fx:id="colModifier" prefWidth="192.0000061035156" text="Modifier" />
+        </columns>
+      </TableView>
+      <Label layoutX="103.0" layoutY="33.0" text="Cours" />
+      <Label layoutX="292.0" layoutY="33.0" text="Materiel" />
+   </children>
+</AnchorPane>

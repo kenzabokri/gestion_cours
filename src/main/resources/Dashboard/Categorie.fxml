@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import java.net.URL?>
+
+<HBox xmlns="http://javafx.com/javafx/21.0.2"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.Categorie.AfficheCatDashboard"
+      spacing="0">
+
+<fx:include source="sideBar.fxml" fx:id="sidebar"/>
+
+
+    <!-- Contenu principal -->
+<VBox styleClass="main-content" HBox.hgrow="ALWAYS">
+    <AnchorPane>
+        <VBox spacing="15" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20"
+              AnchorPane.topAnchor="20" AnchorPane.bottomAnchor="20">
+
+            <!-- Votre contenu existant -->
+            <HBox alignment="CENTER_LEFT" spacing="15" styleClass="header-box">
+                <Label text="Gestion des Catégories" styleClass="header-label" />
+                <HBox spacing="10" styleClass="button-group">
+                    <Button onAction="#redirectToAddCategory" text="Nouvelle Catégorie" styleClass="primary-button" />
+                    <Button onAction="#redirectToAddOeuvre" text="Nouvelle Œuvre" styleClass="action-button" />
+                </HBox>
+            </HBox>
+
+            <VBox spacing="10" styleClass="table-container">
+                <TableView fx:id="tableView" styleClass="data-table">
+                    <columns>
+                        <TableColumn fx:id="idCol" prefWidth="60" text="ID" />
+                        <TableColumn fx:id="nomCol" prefWidth="180" text="Nom" />
+                        <TableColumn fx:id="styleCol" prefWidth="150" text="Style" />
+                        <TableColumn fx:id="techniqueCol" prefWidth="200" text="Technique" />
+                        <TableColumn fx:id="actionCol" prefWidth="180" text="Actions" />
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+            </VBox>
+        </VBox>
+    </AnchorPane>
+</VBox>
+
+<!-- CSS -->
+<stylesheets>
+    <URL value="@../styles/custom-gallery.css" />
+</stylesheets>
+</HBox>
